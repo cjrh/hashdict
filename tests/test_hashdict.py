@@ -2,14 +2,15 @@ from hashdict import HashDict
 
 
 def test_hashdict():
-# Example usage
     hash_dict = HashDict()
     s = "some large text " * 1000
     hash_dict[s] = 42
     assert hash_dict[s] == 42
 
 
-def test_save_load():
+def test_save_load(tmpdir):
+    # Do this in a temporary directory to avoid cluttering the working directory
+    tmpdir.chdir()
     hash_dict = HashDict()
     hash_dict["some large text"] = 42
     hash_dict.save('hash_dict.pkl')
