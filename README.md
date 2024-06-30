@@ -1,6 +1,20 @@
 # hashdict
 Dict that only stores hashes of the keys, and not the key value. Good for large keys.
 
+## Install
+
+This isn't on PyPI because
+
+```bash
+requests.exceptions.HTTPError: 400 Client Error: The name 'hashdict' is too similar to an existing project. See https://pypi.org/help/#project-name for more information. for url: https://upload.pypi.org/legacy/
+```
+
+So you can install it from GitHub which has namespaces:
+
+```bash
+pip install https://github.com/cjrh/hashdict/releases/download/0.1.0/hashdict-0.1.0-py3-none-any.whl 
+``````
+
 ## Overview
 
 `HashDict` is a Python package that provides a dictionary-like class designed to save memory when 
